@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate, useParams } from "react-router-dom";
 
-export function Newyork({ newyorkcity, setNewyorkcity }) {
+export function Pune({ punecity, setPunecity }) {
     const [visible, setvisible] = useState(3)
     const loadmore = () => {
         setvisible((prevcount) => prevcount + 3)
@@ -10,7 +10,7 @@ export function Newyork({ newyorkcity, setNewyorkcity }) {
         <div>
             <div className="london-container">
 
-                {newyorkcity.slice(0, visible).map((city, index) => <NewyorkCard city={city} key={index} />)}
+                {punecity.slice(0, visible).map((city, index) => <PuneCard city={city} key={index} />)}
             </div>
             <div className="center-button">
                 <span className="loadmore" onClick={loadmore}>loadmore</span>
@@ -20,10 +20,11 @@ export function Newyork({ newyorkcity, setNewyorkcity }) {
     )
 }
 
-function NewyorkCard({ city }) {
+
+function PuneCard({ city }) {
     const navigate = useNavigate()
     return (
-        <div className="city-container" onClick={() => navigate(`/newyork/${city.id}`)}>
+        <div className="city-container" onClick={() => navigate(`/pune/${city.id}`)}>
             <div className="city-card">
                 <img src={city.image} />
                 <div className="location-details">
@@ -54,42 +55,9 @@ function NewyorkCard({ city }) {
 }
 
 
-function MumbaiCard({ city }) {
-    const navigate = useNavigate()
-    return (
-        <div className="city-container" onClick={() => navigate(`/mumbai/${city.id}`)}>
-            <div className="city-card">
-                <img src={city.image} />
-                <div className="location-details">
-                    <p><i class="bi bi-geo-alt"></i>{city.location} </p>
-                    <b>{city.address}</b>
-                    <div className="icons">
-                        <div className="icon-col border-left">
-                            <i class="bi bi-building-fill"></i><span>{city.rooms}  Rooms</span>
-                        </div>
-                        <div className="icon-col border-left">
-                            <span>{city.bed} Beds</span>            </div>
-                        <div className="icon-col border-left">
-                            <span>{city.bath} Bath</span>
-                        </div>
-                        <div className="icon-col">
-                            <i class="bi bi-arrows-move"></i> <span>{city.sft} sft</span>
-                        </div>
-
-                    </div>
-                    <div className="price">
-                        <span><mark>${city.price} </mark>/month</span>
-                        <span className="readmore">Read More</span>
-                    </div>
-                </div>
-            </div>
-        </div >
-    )
-}
-
-export function NewyorkCardList({ newyorkcity }) {
+export function PuneCardList({ punecity }) {
     const { id } = useParams()  //link id
-    const cities = newyorkcity[id - 1] //array[index]
+    const cities = punecity[id - 1] //array[index]
     return (
         <div className="city-container center">
             <div className="city-card">
