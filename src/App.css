@@ -1,0 +1,118 @@
+body {
+    background-color: #F8F8F8
+}
+
+.navbar {
+    padding: 35px 35px 5px 35px;
+}
+
+.navbar-content {
+    text-align: center
+}
+
+.navbar-content b {
+    font-size: 25px;
+    color: #00308F
+}
+
+.navbar-content p {
+    font-size: 12px;
+}
+
+.span-button {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.city-button span {
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #D0D0D0;
+    border-radius: 25px
+}
+
+.city-button span:hover {
+    cursor: pointer
+}
+
+
+.view {
+    padding: 8px;
+    border: 1px solid #318CE7;
+    border-radius: 25px;
+}
+
+.london-container {
+    padding: 0 35px 35px 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.city-container {
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px
+}
+
+.city-card {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.city-card img {
+    border-radius: 10px;
+}
+
+.location-details {
+    margin-top: 15px
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1.5px dotted grey
+}
+
+.border-left {
+    border-right: 1.5px dotted grey
+}
+
+.icon-col {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 5px;
+    /* align-items: center */
+}
+
+.price {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center
+}
+
+.price mark {
+    background-color: white;
+    color: #318CE7;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.readmore {
+    padding: 5px;
+    border: 1.5px solid #318CE7;
+    color: #318CE7;
+    border-radius: 25px
+}
